@@ -53,7 +53,7 @@ describe Cube::Client do
         type = "request"
         time = DateTime.now
         id = 42
-        data = { duration_ms: 234 }
+        data = { :duration_ms => 234 }
         @cube.send type, time, id, data
         recv = JSON.parse @cube.socket.recv.first
         recv["type"].must_equal "request"
@@ -68,7 +68,7 @@ describe Cube::Client do
         type = "request"
         time = DateTime.now
         id = 42
-        data = { duration_ms: 234 }
+        data = { :duration_ms => 234 }
         @cube.send type, time, id, data
         recv = JSON.parse @cube.socket.recv.first
         recv["type"].must_equal "request"

@@ -8,5 +8,5 @@ Rake::TestTask.new(:spec) do |spec|
   spec.verbose = true
 end
 
-task default: :spec
+task :default => :spec
 
