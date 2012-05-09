@@ -73,7 +73,7 @@ module Cube
 
       # Start constructing the message to be sent to Cube over UDP.
       message = {
-        type: "#{prefix}#{type}"
+        :type => "#{prefix}#{type}"
       }
       message[:time] = time.iso8601 unless time.nil?
       message[:id] = id unless id.nil?
